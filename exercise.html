@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>The Array.splice() method adds array elements:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    
+    // At position 2, add 2 elements: 
+    fruits.splice(0, 5, );
+    
+    document.getElementById("demo").innerHTML = fruits;function delfirst() {
+    if (cart.length === 0) {
+        alert("Cart is already empty");
+    } else {
+        cart.shift(); // Removes the first element from the array
+        console.log(cart);
+
+        show.innerHTML = "";
+        for (let i = 0; i < cart.length; i++) {
+            show.innerHTML += `<p>${i + 1}. ${cart[i]}</p>`;
+        }
+    }
+}
+
+function addItems() {
+    if (inp.value === "") {
+        alert("Fill in something now");
+    } else {
+        console.log(inp.value);
+        cart.push(inp.value);
+
+        document.getElementById("inp").value = "";
+        console.log(cart);
+
+        // Create a table
+        let table = "<table><tr><th>Index</th><th>Item</th></tr>";
+
+        // Populate the table with array elements
+        for (let i = 0; i < cart.length; i++) {
+            table += `<tr><td>${i + 1}</td><td>${cart[i]}</td></tr>`;
+        }
+
+        table += "</table>";
+
+        // Display the table
+        show.innerHTML = table;
+    }
+}
+
+
+
+    </script> 
+</body>
+</html>
